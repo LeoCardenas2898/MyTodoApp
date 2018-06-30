@@ -64,9 +64,16 @@
                                     <action selector="signInAction:" destination="nax-rr-H1P" eventType="touchUpInside" id="93n-85-X0t"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seh-J5-wNG">
+                                <rect key="frame" x="161" y="323" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="seh-J5-wNG" firstAttribute="centerY" secondItem="QME-vx-H3c" secondAttribute="centerY" id="1Ne-YR-eRR"/>
                             <constraint firstItem="L6A-TD-KuF" firstAttribute="trailing" secondItem="SuB-5R-iKc" secondAttribute="trailing" constant="25" id="4QB-V8-ayq"/>
                             <constraint firstItem="uHE-4C-3Kf" firstAttribute="top" secondItem="87k-Cb-xRF" secondAttribute="bottom" constant="25" id="6Sr-0c-77s"/>
                             <constraint firstItem="SuB-5R-iKc" firstAttribute="top" secondItem="L6A-TD-KuF" secondAttribute="top" constant="30" id="8Ie-Fh-Z0a"/>
@@ -78,6 +85,7 @@
                             <constraint firstItem="L6A-TD-KuF" firstAttribute="bottom" secondItem="uHE-4C-3Kf" secondAttribute="bottom" constant="50" id="lbI-xk-sTH"/>
                             <constraint firstItem="87k-Cb-xRF" firstAttribute="leading" secondItem="L6A-TD-KuF" secondAttribute="leading" constant="25" id="ohj-KF-djx"/>
                             <constraint firstItem="L6A-TD-KuF" firstAttribute="trailing" secondItem="uHE-4C-3Kf" secondAttribute="trailing" constant="25" id="rGc-lw-Ivd"/>
+                            <constraint firstItem="seh-J5-wNG" firstAttribute="centerX" secondItem="QME-vx-H3c" secondAttribute="centerX" id="ti1-1n-djv"/>
                             <constraint firstItem="L6A-TD-KuF" firstAttribute="trailing" secondItem="87k-Cb-xRF" secondAttribute="trailing" constant="25" id="vk7-X4-Nul"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L6A-TD-KuF"/>

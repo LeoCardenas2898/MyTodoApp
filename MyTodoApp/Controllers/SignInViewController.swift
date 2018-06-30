@@ -21,10 +21,16 @@ class SignInViewController: UIViewController {
         //Colocar texto en tiempo de ejecución
         titleLabel.text = "Bienvenido"
     }
+    
+    //Para desactivar el teclado tocando cualquier lado de la pantalla
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    
     //Colocar Action y definir la acccion del Button
     @IBAction func signInAction(_ sender: UIButton) {
-
+        //Ir a StoryBoard Home
         performSegue(withIdentifier: "goToHome", sender: nil)
-        
     }
 }
