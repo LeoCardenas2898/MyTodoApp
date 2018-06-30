@@ -23,6 +23,7 @@ class SignInViewController: UIViewController {
     }
     //Colocar Action y definir la acccion del Button
     @IBAction func signInAction(_ sender: UIButton) {
+
         performSegue(withIdentifier: "goToHome", sender: nil)
         
     }
