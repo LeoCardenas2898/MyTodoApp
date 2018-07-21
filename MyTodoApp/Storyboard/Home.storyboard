@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rwm-0U-SnZ">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,28 +9,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Share-->
-        <scene sceneID="krw-nl-fMJ">
+        <!--ToDos-->
+        <scene sceneID="ufF-0y-ZSG">
             <objects>
-                <viewController id="dCX-Ot-ELC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="My2-vh-jAF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="Xh4-z6-udk"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Share" id="nNV-c9-Ket"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hRx-Sa-f5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ToDos" id="mm1-5U-14V" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xgx-M9-BIO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uO1-xS-xoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="321"/>
+            <point key="canvasLocation" x="-97" y="-636"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="caI-4T-oVW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notes" id="ETq-bM-qOb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fNj-B6-cDj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkp-cA-s8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-96" y="315"/>
         </scene>
         <!--About-->
         <scene sceneID="vNE-TJ-aXN">
             <objects>
                 <viewController id="sHr-TZ-g9M" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zTS-Qj-24Q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="kdg-h4-B1r"/>
@@ -39,52 +43,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="666-tV-uUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="-131"/>
-        </scene>
-        <!--To Do-->
-        <scene sceneID="daO-TP-Ilf">
-            <objects>
-                <viewController id="5C0-G5-kKM" customClass="ToDoViewController" customModule="MyTodoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XHT-5R-0SP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Ad-bq-BeD">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="VpI-E8-T03" firstAttribute="trailing" secondItem="7Ad-bq-BeD" secondAttribute="trailing" id="D4F-Ts-hTj"/>
-                            <constraint firstItem="VpI-E8-T03" firstAttribute="bottom" secondItem="7Ad-bq-BeD" secondAttribute="bottom" id="HHu-xS-ERb"/>
-                            <constraint firstItem="7Ad-bq-BeD" firstAttribute="leading" secondItem="VpI-E8-T03" secondAttribute="leading" id="csc-Iz-hHk"/>
-                            <constraint firstItem="7Ad-bq-BeD" firstAttribute="top" secondItem="VpI-E8-T03" secondAttribute="top" id="zs3-OA-33c"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="VpI-E8-T03"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="To Do" id="Cvv-TX-Efa"/>
-                    <connections>
-                        <outlet property="ToDoTableView" destination="7Ad-bq-BeD" id="yr1-LB-c8M"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uoP-nV-GU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="340" y="-593.25337331334333"/>
+            <point key="canvasLocation" x="300" y="-130"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dFx-qW-k0K">
             <objects>
-                <tabBarController id="rwm-0U-SnZ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" id="rwm-0U-SnZ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ngf-kr-loH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="5C0-G5-kKM" kind="relationship" relationship="viewControllers" id="bxP-qa-mYP"/>
-                        <segue destination="dCX-Ot-ELC" kind="relationship" relationship="viewControllers" id="zCy-C3-GfL"/>
-                        <segue destination="sHr-TZ-g9M" kind="relationship" relationship="viewControllers" id="Mhl-pe-hql"/>
+                        <segue destination="mm1-5U-14V" kind="relationship" relationship="viewControllers" id="Afl-k9-kbA"/>
+                        <segue destination="ETq-bM-qOb" kind="relationship" relationship="viewControllers" id="QC0-eJ-Kdg"/>
+                        <segue destination="sHr-TZ-g9M" kind="relationship" relationship="viewControllers" id="Hsd-28-eKU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPx-8W-Pr4" userLabel="First Responder" sceneMemberID="firstResponder"/>

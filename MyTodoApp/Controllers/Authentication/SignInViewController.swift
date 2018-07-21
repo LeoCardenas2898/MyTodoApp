@@ -32,7 +32,8 @@ class SignInViewController: UIViewController {
     //Colocar Action y definir la acccion del Button
     @IBAction func signInAction(_ sender: UIButton) {
         //Ir a StoryBoard Home
-        performSegue(withIdentifier: "goToHome", sender: nil)
+        let tabBarController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "tabBarController")
+        self.present(tabBarController, animated: true, completion: nil)
     }
     
     
