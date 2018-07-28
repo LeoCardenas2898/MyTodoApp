@@ -12,7 +12,7 @@
         <!--Todo Detail View Controller-->
         <scene sceneID="v2L-sj-ew1">
             <objects>
-                <viewController id="Qxn-RL-Ntl" customClass="TodoDetailViewController" customModule="MyTodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="todoDetailVC" id="Qxn-RL-Ntl" customClass="TodoDetailViewController" customModule="MyTodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kvO-DX-1h8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,9 +75,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wl-14-nP5">
-                                <rect key="frame" x="170" y="607" width="35" height="30"/>
+                                <rect key="frame" x="137.5" y="607" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="sZP-Jf-CRb"/>
+                                    <constraint firstAttribute="width" constant="100" id="sZP-Jf-CRb"/>
                                 </constraints>
                                 <state key="normal" title="Save"/>
                             </button>
@@ -116,6 +116,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ggw-Ec-HCd"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTodoTextView" destination="Sx4-BV-Dtu" id="LEz-Ey-ID1"/>
+                        <outlet property="titleTodoTextField" destination="3Ps-6q-9LR" id="agk-SD-enG"/>
+                        <outlet property="todoActionButton" destination="4wl-14-nP5" id="bnW-Oz-N1c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cX0-MF-gpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,9 +134,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-Qw-7zq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-Qw-7zq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pxe-9m-z3v" id="foV-JQ-g66"/>
+                                    <outlet property="delegate" destination="pxe-9m-z3v" id="Y9D-38-DZh"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,7 +155,7 @@
                     <navigationItem key="navigationItem" title="To Do" id="Ac5-Jd-UCw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fvZ-WG-IuJ">
                             <connections>
-                                <segue destination="Qxn-RL-Ntl" kind="show" id="sHi-kl-QZC">
+                                <segue destination="Qxn-RL-Ntl" kind="show" identifier="todoDetail" id="sHi-kl-QZC">
                                     <nil key="action"/>
                                 </segue>
                             </connections>

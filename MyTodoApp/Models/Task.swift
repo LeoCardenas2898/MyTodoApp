@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Task{
     var title: String
@@ -15,6 +16,18 @@ class Task{
     init(title: String, creation: Date) {
         self.title = title
         self.creation = creation
+    }
+    
+    static func from(json: JSON)-> Task{
+        return Task(title: json["title"].stringValue, creation: Date())
+    }
+    
+    static func from(jsonArray: [JSON])-> [Task]{
+        var resultArray: [Task] = []
+        for jsonTask in jsonArray{
+            resultArray.append(Task.from(json: jsonTask))
+        }
+        return resultArray
     }
     
 }
