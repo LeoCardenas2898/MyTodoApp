@@ -32,6 +32,7 @@
 		AC8608732103DC1000BAB6E4 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8608722103DC1000BAB6E4 /* NotesViewController.swift */; };
 		AC8608752103DC2300BAB6E4 /* NotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8608742103DC2300BAB6E4 /* NotesDetailViewController.swift */; };
 		ACB5265B211F7F2B00AE25BB /* TodoEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5265A211F7F2B00AE25BB /* TodoEndPoint.swift */; };
+		ACB5266E211FA63500AE25BB /* ShowAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5266D211FA63500AE25BB /* ShowAlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +191,7 @@
 		AC8608722103DC1000BAB6E4 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		AC8608742103DC2300BAB6E4 /* NotesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailViewController.swift; sourceTree = "<group>"; };
 		ACB5265A211F7F2B00AE25BB /* TodoEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEndPoint.swift; sourceTree = "<group>"; };
+		ACB5266D211FA63500AE25BB /* ShowAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 		AC19BF2520E8197700E200B7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ACB5266C211FA5FE00AE25BB /* Extensions */,
 				AC33794A210D0041003282A2 /* Home */,
 				AC86086F2103DB4C00BAB6E4 /* Notes */,
 				AC86086E2103DB4400BAB6E4 /* ToDos */,
@@ -358,6 +361,14 @@
 				AC8608742103DC2300BAB6E4 /* NotesDetailViewController.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		ACB5266C211FA5FE00AE25BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ACB5266D211FA63500AE25BB /* ShowAlertViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,6 +566,7 @@
 				AC8608752103DC2300BAB6E4 /* NotesDetailViewController.swift in Sources */,
 				AC19BF1020E816F800E200B7 /* AppDelegate.swift in Sources */,
 				AC4FBFF120F1654A00B6E25B /* ToDo.swift in Sources */,
+				ACB5266E211FA63500AE25BB /* ShowAlertViewController.swift in Sources */,
 				AC4FBFEA20F15C6100B6E25B /* SignUpViewController.swift in Sources */,
 				ACB5265B211F7F2B00AE25BB /* TodoEndPoint.swift in Sources */,
 				AC33798A210D0863003282A2 /* ToDoAPI.swift in Sources */,
