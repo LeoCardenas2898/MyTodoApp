@@ -15,7 +15,7 @@ class ToDo{
     var description: String
     var isTasksAvailable: Bool
     var creation: Date
-    var tasks: [Task]?
+    var task: [Task]?
     
     init(title: String, description: String, isTasksAvailable: Bool, creation: Date, id: Int){
         self.title = title

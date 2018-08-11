@@ -28,27 +28,49 @@ class TodoDetailViewController: UIViewController {
         }
         if !isExisted{
             todoActionButton.setTitle("Create", for: .normal)
+            todoActionButton.addTarget(self, action: #selector(createTodo), for: .touchUpInside)
         }else{
             todoActionButton.setTitle("Save Changes", for: .normal)
             todoActionButton.addTarget(self, action: #selector(saveTodosChanges), for: .touchUpInside)
         }
         
     }
+    
+    @objc func createTodo(){
+        let newTodo = ToDo(title: titleTodoTextField.text!, description: descriptionTodoTextView.text!, isTasksAvailable: false, creation: Date(), id: 0)
+        TodoEndPoint.createTodo(withTodo: newTodo) { (idNewTodo, error) in
+            if let error = error{
+                print(error)
+                return
+            }
+            if let _ = idNewTodo{
+                self.navigationController?.popViewController(animated: true)
+            }
+            
+        }
+    }
 
     @objc func saveTodosChanges(){
         if let todo = self.todo{
             todo.title = titleTodoTextField.text!
             todo.description = descriptionTodoTextView.text!
-            saveTodosChangesToServerWith(todo: todo)
+            saveTodosChangesWith(todo: todo)
         }
      
     }
     
-    func saveTodosChangesToServerWith(todo: ToDo){
-        let params = ["title": todo.title, "description": todo.description ]
-        let url = String(format: "\(ToDoAPI.baseURL)\(ToDoAPI.editMyTodoUrl)", "\(todo.id)")
-        Alamofire.request(url, method: .put, parameters: params).responseJSON{ response in
-            self.navigationController?.popViewController(animated: true)
+    func saveTodosChangesWith(todo: ToDo){
+        TodoEndPoint.editTodo(withUpdatedTodo: todo){ (todoId, error) in
+            if let error = error{
+                print(error)
+                return
+            }
+            if let _ = todoId{
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+            
         }
     }
 

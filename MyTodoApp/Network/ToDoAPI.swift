@@ -6,12 +6,12 @@
 //  Copyright © 2018 DoApps. All rights reserved.
 //
 
-import Foundation
-
 class ToDoAPI {
     
-    static let baseURL = "http://192.168.1.10:3000"
+    //%@ recibirá un String
+    static let baseURL = "http://192.168.1.29:3000"
     static let myTodosUrl = "/api/ToDos"
-    static let editMyTodoUrl = "/api/ToDos/%@"
-    
+    static let modifyMyTodoUrl = "/api/ToDos/%@"
+    static let todoTaskUrl = "api/ToDos/%@/tasks"
+    static let myTasksUrl = "api/Tasks"
 }
