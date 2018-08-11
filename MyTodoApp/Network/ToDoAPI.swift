@@ -12,6 +12,6 @@ class ToDoAPI {
     static let baseURL = "http://192.168.1.29:3000"
     static let myTodosUrl = "/api/ToDos"
     static let modifyMyTodoUrl = "/api/ToDos/%@"
-    static let todoTaskUrl = "api/ToDos/%@/tasks"
-    static let myTasksUrl = "api/Tasks"
+    static let todoTaskUrl = "/api/ToDos/%@/tasks"
+    static let myTasksUrl = "/api/Tasks"
 }
