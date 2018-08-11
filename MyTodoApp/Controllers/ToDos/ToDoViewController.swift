@@ -66,7 +66,6 @@ class ToDoViewController: UIViewController {
             
         }
     }
-    
 }
 
 extension ToDoViewController: UITableViewDelegate {
